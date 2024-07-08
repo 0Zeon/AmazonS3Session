@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import PostView
+from .views import PostView, ImageView
 
 urlpatterns = [
     path('posts', PostView.as_view(), name='post-list-create'),
     path('posts/<int:id>', PostView.as_view(), name='post-detail-update-delete'),
+    path("images/upload", ImageView.as_view(), name="images-upload")
 ]
